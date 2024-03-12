@@ -2,9 +2,22 @@ import React from 'react';
 import './Relatorios.css'; // Importando o arquivo de estilo
 
 function Relatorios({ relatorios }) {
+  const enviarEmail = () => {
+    // Lógica para enviar por e-mail
+    alert('Enviando por e-mail...');
+  };
+
+  const imprimirRelatorios = () => {
+    // Lógica para imprimir
+    window.print();
+  };
+
   return (
     <div className="relatorios-container"> {/* Adicionando a classe CSS */}
       <h2 className='text-titulo'>Relatórios</h2>
+      <div className="button-container">
+        
+      </div>
       <table className="table"> {/* Adicionando a classe CSS */}
         <thead>
           <tr>

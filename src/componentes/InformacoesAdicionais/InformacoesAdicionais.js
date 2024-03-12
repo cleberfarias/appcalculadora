@@ -33,13 +33,25 @@ function InformacoesAdicionais({ relatorios, inputSalario }) {
     return bonus;
   }
 
+  const enviarEmail = () => {
+    // Lógica para enviar por e-mail
+    alert('Enviando por e-mail...');
+  };
+
+  const imprimirInformacoes = () => {
+    // Lógica para imprimir
+    window.print();
+  };
+
   return (
     <div className="informacoes-container"> {/* Adicionando a classe CSS */}
-      <p>Total de pontos: {totalPontos}</p>
-      <p>Salário: {inputSalario}</p>
-      <p>Comissão: {totalComissao}</p>
-      <p>Bônus: {totalBonus}</p>
-      <p>Total de Salário, Comissão e Bônus: {totalSalarioComissaoEBonus}</p>
+      <p>Total de pontos:{totalPontos}</p>
+      <p>Salário: R$ {inputSalario}</p>
+      <p>Comissão: R$ {totalComissao}</p>
+      <p>Bônus: R$ {totalBonus}</p>
+      <p>Total de Salário, Comissão e Bônus: R$ {totalSalarioComissaoEBonus}</p>
+      <button onClick={enviarEmail} className="submit-button">Enviar por E-mail</button>
+      <button onClick={imprimirInformacoes} className="submit-button">Imprimir</button>
     </div>
   );
 }

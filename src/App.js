@@ -1,8 +1,9 @@
+// App.js
 import React, { useState } from 'react';
 import Formulario from './componentes/Formulario/Formulario';
 import Relatorios from './componentes/Relatorios/Relatorios';
 import InformacoesAdicionais from './componentes/InformacoesAdicionais/InformacoesAdicionais';
-
+import './App.css';
 
 function App() {
   const [relatorios, setRelatorios] = useState([]);
@@ -72,7 +73,7 @@ function App() {
     <div className="App">
       <Formulario onFormSubmit={handleFormSubmit} />
       <Relatorios relatorios={relatorios} />
-      <InformacoesAdicionais relatorios={relatorios} inputSalario={inputSalario} />
+      <InformacoesAdicionais relatorios={relatorios} inputSalario={inputSalario} className="left-align" />
     </div>
   );
 }

@@ -1,77 +1,13 @@
-/* Configurações gerais para o corpo do documento */
-body {
-  margin: 0; /* Remover margens padrão */
-  font-family: Arial, sans-serif; /* Usar a fonte Arial ou fonte genérica */
-  background-color: #f0f0f0; /* Cor de fundo branca */
+/* App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Estilos para o contêiner principal */
-.container {
-  display: flex; /* Usar flexbox para o layout */
-  flex-direction: column; /* Organizar os itens em coluna */
-  align-items: center; /* Centralizar os itens no eixo principal (vertical) */
-  justify-content: center; /* Centralizar os itens no eixo secundário (horizontal) */
-  padding: 20px; /* Adicionar preenchimento interno */
-  background-color: #c5db34; /* Cor de fundo azul */
-  color: #ffffff; /* Cor do texto branca */
-}
-
-/* Estilos para o formulário */
-form {
-  display: flex; /* Usar flexbox para o layout */
-  flex-direction: column; /* Organizar os itens em coluna */
-  align-items: center; /* Centralizar os itens no eixo principal (vertical) */
-  width: 100%; /* Largura total */
-  max-width: 500px; /* Largura máxima */
-}
-
-/* Estilos para inputs, selects e labels */
-input,
-select,
-label {
-  margin-bottom: 10px; /* Adicionar margem inferior */
-  width: 100%; /* Largura total */
-}
-
-/* Estilos para inputs de texto e selects */
-input[type="text"],
-select {
-  padding: 10px; /* Adicionar preenchimento interno */
-  border: none; /* Remover borda */
-  border-radius: 5px; /* Adicionar bordas arredondadas */
-}
-
-/* Estilos para labels */
-label {
-  display: flex; /* Usar flexbox para o layout */
-  align-items: center; /* Centralizar os itens no eixo principal (vertical) */
-}
-
-/* Estilos para botões */
-button {
-  padding: 10px 20px; /* Adicionar preenchimento interno */
-  background-color: #e2905d; /* Cor do botão azul claro */
-  border: none; /* Remover borda */
-  border-radius: 5px; /* Adicionar bordas arredondadas */
-  color: #ffffff; /* Cor do texto do botão */
-  cursor: pointer; /* Alterar cursor ao passar por cima */
-}
-
-/* Estilos para o hover dos botões */
-button:hover {
-  background-color: #2e86c1; /* Cor do botão azul mais escuro ao passar o mouse */
-}
-
-/* Estilos para tabelas */
-table {
-  width: 100%; /* Largura total */
-  border-collapse: collapse; /* Colapsar as bordas da tabela */
-}
-
-/* Estilos para células de cabeçalho e células de dados */
-table th,
-table td {
-  padding: 10px; /* Adicionar preenchimento interno */
-  border: 1px solid #ffffff; /* Cor da borda branca */
-  text-align: left; /* Alinhar o texto à esquerda */
+.left-align {
+  text-align: left;
+  margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
 }
