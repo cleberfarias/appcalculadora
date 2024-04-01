@@ -6,7 +6,7 @@ body {
   height: 100vh; /* Altura total da tela */
   margin: 0; /* Remover margens padrão */
   font-family: Arial, sans-serif; /* Usar a fonte Arial ou fonte genérica */
-  background-image: url(../../imagem/fundo2.png);
+  background-image: url(../../imagem/fundo.png);
   background-size: cover; /* Ajustar o tamanho da imagem para cobrir toda a área */
   background-position: center; /* Centralizar a imagem na página */
 }
