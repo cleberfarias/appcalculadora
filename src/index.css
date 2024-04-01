@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Media query para telas menores, como smartphones */
+@media screen and (max-width: 600px) {
+  .form-container {
+    max-width: 100%; /* Torna o contêiner do formulário ocupando toda a largura da tela */
+    /* Outros ajustes de estilo para telas menores */
+  }
+}
