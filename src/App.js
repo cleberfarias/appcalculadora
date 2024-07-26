@@ -3,6 +3,7 @@ import Formulario from './componentes/Formulario/Formulario';
 import Relatorios from './componentes/Relatorios/Relatorios';
 import InformacoesAdicionais from './componentes/InformacoesAdicionais/InformacoesAdicionais';
 import './App.css';
+import LogoutButton from './componentes/Logout/LogoutButton';
 
 function App() {
   const [relatorios, setRelatorios] = useState([]);
@@ -80,6 +81,7 @@ function App() {
 
   return (
     <div className="App">
+      <LogoutButton /> {/* Adicione o botão de logout */}
       <Formulario onFormSubmit={handleFormSubmit} />
       <Relatorios relatorios={relatorios} onDelete={handleDelete} />
       <InformacoesAdicionais relatorios={relatorios} inputSalario={inputSalario} className="left-align" />

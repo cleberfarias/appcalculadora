@@ -5,19 +5,19 @@ const AuthContext = createContext();
 
 // Fornecimento do contexto
 export function AuthProvider({ children }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // Inicialmente, não autenticado
+    const [isAuthenticated, setIsAuthenticated] = useState(false); // Inicialmente, não autenticado
 
-  const login = () => setIsAuthenticated(true);
-  const logout = () => setIsAuthenticated(false);
+    const login = () => setIsAuthenticated(true);
+    const logout = () => setIsAuthenticated(false);
 
-  return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+            {children}
+        </AuthContext.Provider>
+    );
 }
 
 // Hook para usar o contexto
 export function useAuth() {
-  return useContext(AuthContext);
+    return useContext(AuthContext);
 }

@@ -1,0 +1,15 @@
+/* LogoutButton.css */
+.logout-button {
+    background-color: #4d68ff; /* Cor de fundo vermelha */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.logout-button:hover {
+    background-color: #1505f1; /* Cor de fundo mais escura quando o mouse está sobre o botão */
+}

@@ -11,12 +11,18 @@ function Login() {
     const handleLogin = (event) => {
       event.preventDefault();
   
-      // Senha provisória
-      const validEmail = 'cleber@delgado.com';
-      const validPassword = '123';
+      // Senhas provisórias
+      const validUsers = [
+        { email: 'cleber@delgado.com', password: '123' },
+        { email: 'test@test', password: '321' }
+      ];
   
       // Validação
-      if (email === validEmail && password === validPassword) {
+      const userIsValid = validUsers.some(
+        user => user.email === email && user.password === password
+      );
+  
+      if (userIsValid) {
         login(); // Define como autenticado
       } else {
         setError('E-mail ou senha incorretos.');
@@ -73,7 +79,7 @@ function Login() {
         <div className="sidebar">
           <div className="sidebar-content">
             <h2 className="sidebar-title">Acompanhe suas metas</h2>
-            <h3 className="sidebar-subtitle">Relatorios mensal<br />Calculo de Comissão</h3>
+            <h3 className="sidebar-subtitle">Relatórios mensal<br />Cálculo de Comissão</h3>
             <div className="banner-container">
               <a href="https://cleberdelgado.com.br/" target="_blank" rel="noopener noreferrer" title="Clique para saber mais ">
                 <img src="" alt="Imagem do desenvolvedor" />
@@ -84,4 +90,5 @@ function Login() {
       </div>
     );
   }
-export default Login;
+  
+  export default Login;
