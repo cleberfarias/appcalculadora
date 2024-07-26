@@ -1,14 +1,6 @@
 /* Estilo para o corpo do documento */
-body {
-  display: flex; /* Usar flexbox para o layout */
-  justify-content: center; /* Centralizar os itens no eixo secundário (horizontal) */
-  align-items: center; /* Centralizar os itens no eixo principal (vertical) */
-  height: 100vh; /* Altura total da tela */
-  margin: 0; /* Remover margens padrão */
-  font-family: Arial, sans-serif; /* Usar a fonte Arial ou fonte genérica */
-  background-image: url(../../imagem/fundo2.png);
-  background-size: cover; /* Ajustar o tamanho da imagem para cobrir toda a área */
-  background-position: center; /* Centralizar a imagem na página */
+.relatorios-container{
+  
 }
 
 /* Estilo para o contêiner principal do formulário */
@@ -17,23 +9,27 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 500px; /* Ajustado para uma largura máxima mais razoável */
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo para os campos de entrada */
 .input-field {
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Maior espaço entre os campos */
   width: 100%;
   padding: 10px;
-  border: none;
+  border: 1px solid #ccc; /* Borda clara para maior contraste */
   border-radius: 5px;
+  box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 /* Estilo para as labels */
 .label {
-  display: flex;
-  align-items: center;
-  color: #ffffff;
+  color: #faf8f8;
+  margin-bottom: 5px;
 }
 
 /* Estilo para os checkboxes */
@@ -49,7 +45,7 @@ body {
   background-color: #5dade2;
   border: none;
   border-radius: 5px;
-  color: #ffffff;
+  color: #f8f4f4;
   cursor: pointer;
 }
 
@@ -67,23 +63,24 @@ body {
 /* Estilo para células do cabeçalho */
 .table th {
   padding: 10px; /* Adicionar preenchimento interno */
-  border: 1px solid #ffffff; /* Cor da borda branca */
+  border: 1px solid #fffdfd; /* Cor da borda branca */
   text-align: left; /* Alinhar o texto à esquerda */
   font-weight: bold; /* Tornar o texto em negrito */
-  color: #ffffff;
+  color: #f8f4f4;
 }
 
 /* Estilo para células de dados */
 .table td {
   padding: 10px; /* Adicionar preenchimento interno */
-  border: 1px solid #ffffff; /* Cor da borda branca */
+  border: 1px solid #fbf8f8; /* Cor da borda branca */
   text-align: left; /* Alinhar o texto à esquerda */
   width: auto; /* Largura automática */
-  color: #ffffff;
+  color: #fcf9f9;
 }
 
 /* Estilo para o texto do título */
 .text-titulo {
-  color: #ffffff;
+  color: #050505;
   text-align: center;
+  margin-bottom: 20px; /* Adicionar espaço abaixo do título */
 }

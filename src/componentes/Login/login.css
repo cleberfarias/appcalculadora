@@ -1,0 +1,95 @@
+/* login.css */
+
+/* Estilização do container principal */
+.login-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Estilização do formulário de login */
+.login-form-container {
+    width: 50%;
+    height: 100vh; /* Garantir que o formulário ocupe a altura total */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding na largura total */
+}
+
+/* Estilização da barra lateral */
+.sidebar {
+    width: 50%;
+    height: 100vh;
+    background-image: url('/src/imagem/lupa.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b0aeae;
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding na largura total */
+}
+
+/* Conteúdo da barra lateral */
+.sidebar-content {
+    text-align: center;
+}
+
+.sidebar-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.sidebar-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.banner-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilização do título do formulário */
+.text-titulo {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Estilização dos itens do formulário */
+.FormItem {
+    margin-bottom: 15px;
+}
+
+.FormLabel {
+    color: #ffffff;
+}
+
+.FormInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.FormButton {
+    background-color: var(--blue);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.FormButton:hover {
+    background-color: #0056b3; /* Alterar para uma cor mais escura quando passar o mouse */
+}
+
+.ForgotPassword {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}

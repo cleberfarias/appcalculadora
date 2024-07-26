@@ -37,24 +37,6 @@ function Formulario({ onFormSubmit }) {
     setInputSalario('');
   };
 
-  const handleDelete = () => {
-    // Adicionar lógica para excluir aqui
-    // Esta função seria fornecida pelo componente pai
-    // Por enquanto, apenas exibiremos um alerta
-    alert('Excluir registro...');
-  };
-
-  // Função para formatar o salário como moeda (formato de real)
-  const formatCurrency = (value) => {
-    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
-  };
-
-  // Função para formatar a data no formato mês/ano
-  const formatDate = (date) => {
-    const [year, month] = date.split('-');
-    return `${month}/${year}`;
-  };
-
   return (
     <form onSubmit={handleSubmit} className="form-container">
       <h2 className='texto-form'>Relatório de Pré-Vendas</h2>
@@ -86,11 +68,8 @@ function Formulario({ onFormSubmit }) {
       <select value={tipo} onChange={(e) => setTipo(e.target.value)} className="input-field">
         <option value="">Selecione o tipo</option>
         <option value="GOOGLE ADS">GOOGLE ADS</option>
-        <option value="FALECONOSCO">FALECONOSCO</option>
         <option value="TELEFONE">TELEFONE</option>
         <option value="INDICAÇÕES">INDICAÇÕES</option>
-        <option value="EBOOK">EBOOK</option>
-        <option value="WEBINAR">WEBINAR</option>
         <option value="EVENTO">EVENTO</option>
         <option value="BASE">BASE</option>
         <option value="OUTBOUND">OUTBOUND</option>
@@ -106,7 +85,6 @@ function Formulario({ onFormSubmit }) {
       <div className="button-container">
         <button type="submit" className="submit-button">Cadastrar</button>
         <button type="button" onClick={handleClear} className="submit-button">Limpar</button>
-        <button type="button" onClick={handleDelete} className="submit-button">Excluir</button>
       </div>
     </form>
   );

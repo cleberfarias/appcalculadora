@@ -1,24 +1,13 @@
 import React from 'react';
 import './Relatorios.css'; // Importando o arquivo de estilo
 
-function Relatorios({ relatorios }) {
-  const enviarEmail = () => {
-    // Lógica para enviar por e-mail
-    alert('Enviando por e-mail...');
-  };
-
-  const imprimirRelatorios = () => {
-    // Lógica para imprimir
-    window.print();
-  };
-
+function Relatorios({ relatorios, onDelete }) {
   return (
-    <div className="relatorios-container"> {/* Adicionando a classe CSS */}
+    <div className="relatorios-container">
       <h2 className='text-titulo'>Relatórios</h2>
       <div className="button-container">
-        
       </div>
-      <table className="table"> {/* Adicionando a classe CSS */}
+      <table className="table">
         <thead>
           <tr>
             <th>Empresa</th>
@@ -27,6 +16,7 @@ function Relatorios({ relatorios }) {
             <th>Venda</th>
             <th>Reunião</th>
             <th>Pontos</th>
+            <th>Ações</th> {/* Cabeçalho da coluna de ações */}
           </tr>
         </thead>
         <tbody>
@@ -35,9 +25,12 @@ function Relatorios({ relatorios }) {
               <td>{relatorio.empresa}</td>
               <td>{relatorio.data}</td>
               <td>{relatorio.tipo}</td>
-              <td>{relatorio.venda}</td>
-              <td>{relatorio.reuniao}</td>
+              <td>{relatorio.venda ? 'Sim' : 'Não'}</td>
+              <td>{relatorio.reuniao ? 'Sim' : 'Não'}</td>
               <td>{relatorio.pontos}</td>
+              <td>
+                <button onClick={() => onDelete(index)} className="delete-button">Excluir</button>
+              </td>
             </tr>
           ))}
         </tbody>

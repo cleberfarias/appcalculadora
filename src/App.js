@@ -1,5 +1,4 @@
-// App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Formulario from './componentes/Formulario/Formulario';
 import Relatorios from './componentes/Relatorios/Relatorios';
 import InformacoesAdicionais from './componentes/InformacoesAdicionais/InformacoesAdicionais';
@@ -8,6 +7,13 @@ import './App.css';
 function App() {
   const [relatorios, setRelatorios] = useState([]);
   const [inputSalario, setInputSalario] = useState('');
+
+  useEffect(() => {
+    const savedRelatorios = localStorage.getItem('relatorios');
+    if (savedRelatorios) {
+      setRelatorios(JSON.parse(savedRelatorios));
+    }
+  }, []);
 
   const handleFormSubmit = ({ empresa, data, tipo, venda, reuniao, inputSalario }) => {
     const novoRelatorio = {
@@ -18,8 +24,17 @@ function App() {
       reuniao: reuniao ? 'Sim' : '',
       pontos: calcularPontos(tipo, venda, reuniao),
     };
-    setRelatorios([...relatorios, novoRelatorio]);
+    const novosRelatorios = [...relatorios, novoRelatorio];
+    setRelatorios(novosRelatorios);
     setInputSalario(parseFloat(inputSalario));
+    localStorage.setItem('relatorios', JSON.stringify(novosRelatorios));
+  };
+
+  const handleDelete = (index) => {
+    const novosRelatorios = [...relatorios];
+    novosRelatorios.splice(index, 1);
+    setRelatorios(novosRelatorios);
+    localStorage.setItem('relatorios', JSON.stringify(novosRelatorios));
   };
 
   function calcularPontos(tipo, venda, reuniao) {
@@ -27,13 +42,10 @@ function App() {
     if (venda) {
       switch (tipo) {
         case 'GOOGLE ADS':
-        case 'FALECONOSCO':
         case 'TELEFONE':
         case 'INDICAÇÕES':
           pontos = 5;
           break;
-        case 'EBOOK':
-        case 'WEBINAR':
         case 'EVENTO':
         case 'BASE':
           pontos = 20;
@@ -48,13 +60,10 @@ function App() {
     if (reuniao) {
       switch (tipo) {
         case 'GOOGLE ADS':
-        case 'FALECONOSCO':
         case 'TELEFONE':
         case 'INDICAÇÕES':
           pontos += 0.5;
           break;
-        case 'EBOOK':
-        case 'WEBINAR':
         case 'EVENTO':
         case 'BASE':
           pontos += 1;
@@ -72,7 +81,7 @@ function App() {
   return (
     <div className="App">
       <Formulario onFormSubmit={handleFormSubmit} />
-      <Relatorios relatorios={relatorios} />
+      <Relatorios relatorios={relatorios} onDelete={handleDelete} />
       <InformacoesAdicionais relatorios={relatorios} inputSalario={inputSalario} className="left-align" />
     </div>
   );

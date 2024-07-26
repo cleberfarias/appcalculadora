@@ -5,9 +5,30 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-image: url('/src/imagem/logo.jpg'); /* Caminho para a imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .left-align {
   text-align: left;
-  margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+  margin-left: 20px;
+}
+
+.logout-button {
+  position: absolute; /* Posicionar o botão fora do fluxo normal do layout */
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #d9534f; /* Cor vermelha padrão para botão de logout */
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-button:hover {
+  background-color: #c9302c; /* Cor mais escura para hover */
 }
